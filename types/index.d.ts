@@ -321,6 +321,8 @@ export interface Options<RowData extends object> {
   headerSelectionProps?: object;
   headerStyle?: React.CSSProperties;
   hideFilterIcons?: boolean;
+  import?: () => void;
+  importButton?: boolean;
   initialPage?: number;
   loadingType?: "overlay" | "linear";
   maxBodyHeight?: number | string;
@@ -406,6 +408,8 @@ export interface Localization {
     exportAriaLabel?: string;
     exportCSVName?: React.ReactNode;
     exportPDFName?: React.ReactNode;
+    importTitle?: React.ReactNode;
+    importAriaLabel?: string;
     searchTooltip?: React.ReactNode;
     searchPlaceholder?: React.ReactNode;
     searchAriaLabel?: string;

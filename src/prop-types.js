@@ -322,6 +322,8 @@ export const propTypes = {
     headerSelectionProps: PropTypes.object,
     headerStyle: PropTypes.object,
     hideFilterIcons: PropTypes.bool,
+    import: PropTypes.func,
+    importButton: PropTypes.bool,
     initialPage: PropTypes.number,
     maxBodyHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     minBodyHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),

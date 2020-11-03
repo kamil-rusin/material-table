@@ -122,6 +122,12 @@ export class MTableToolbar extends React.Component {
     this.setState({ exportButtonAnchorEl: null });
   };
 
+  import = () => {
+    if (this.props.import) {
+      this.props.import();
+    }
+  };
+
   renderSearch() {
     const localization = {
       ...MTableToolbar.defaultProps.localization,
@@ -277,6 +283,19 @@ export class MTableToolbar extends React.Component {
             </Menu>
           </span>
         )}
+        {this.props.importButton && (
+          <span>
+            <Tooltip title={localization.importTitle}>
+              <IconButton
+                color="inherit"
+                onClick={this.import}
+                aria-label={localization.importAriaLabel}
+              >
+                <this.props.icons.Import />
+              </IconButton>
+            </Tooltip>
+          </span>
+        )}
         <span>
           <this.props.components.Actions
             actions={
@@ -391,6 +410,8 @@ MTableToolbar.defaultProps = {
     exportAriaLabel: "Export",
     exportCSVName: "Export as CSV",
     exportPDFName: "Export as PDF",
+    importTitle: "Import",
+    importAriaLabel: "Import",
     searchTooltip: "Search",
     searchPlaceholder: "Search",
     searchAriaLabel: "Search",
@@ -439,6 +460,8 @@ MTableToolbar.propTypes = {
   exportFileName: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   exportCsv: PropTypes.func,
   exportPdf: PropTypes.func,
+  import: PropTypes.func,
+  importButton: PropTypes.bool,
   classes: PropTypes.object,
   searchAutoFocus: PropTypes.bool,
 };
