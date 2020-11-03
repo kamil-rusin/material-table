@@ -16,6 +16,7 @@ import { CsvBuilder } from "filefy";
 import PropTypes, { oneOf } from "prop-types";
 import "jspdf-autotable";
 import * as React from "react";
+import font from "../utils/RobotoLight";
 const jsPDF = typeof window !== "undefined" ? require("jspdf").jsPDF : null;
 /* eslint-enable no-unused-vars */
 
@@ -82,6 +83,8 @@ export class MTableToolbar extends React.Component {
         startY: 50,
         head: [columns.map((columnDef) => columnDef.title)],
         body: data,
+        styles: { font: "Roboto-Light" },
+        headStyles: { fontStyle: "normal" },
       };
 
       const unit = "pt";
@@ -89,6 +92,9 @@ export class MTableToolbar extends React.Component {
       const orientation = "landscape";
 
       const doc = new jsPDF(orientation, unit, size);
+      doc.addFileToVFS("Roboto-Light-normal.ttf", font);
+      doc.addFont("Roboto-Light-normal.ttf", "Roboto-Light", "normal");
+      doc.setFont("Roboto-Light", "normal");
       doc.setFontSize(15);
       doc.text(this.props.exportFileName || this.props.title, 40, 40);
       doc.autoTable(content);
