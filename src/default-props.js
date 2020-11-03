@@ -139,6 +139,11 @@ export const defaultProps = {
         first_page
       </Icon>
     )),
+    Import: React.forwardRef((props, ref) => (
+      <Icon {...props} ref={ref}>
+        input_sharp
+      </Icon>
+    )),
     LastPage: React.forwardRef((props, ref) => (
       <Icon {...props} ref={ref}>
         last_page
@@ -213,6 +218,7 @@ export const defaultProps = {
     header: true,
     headerSelectionProps: {},
     hideFilterIcons: false,
+    importButton: false,
     loadingType: "overlay",
     padding: "default",
     searchAutoFocus: false,
