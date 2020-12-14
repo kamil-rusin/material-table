@@ -288,6 +288,15 @@ var MTableToolbar = /*#__PURE__*/ (function (_React$Component) {
         }
       }
     );
+    (0, _defineProperty2["default"])(
+      (0, _assertThisInitialized2["default"])(_this),
+      "help",
+      function () {
+        if (_this.props.help) {
+          _this.props.help();
+        }
+      }
+    );
     _this.state = {
       columnsButtonAnchorEl: null,
       exportButtonAnchorEl: null,
@@ -570,7 +579,27 @@ var MTableToolbar = /*#__PURE__*/ (function (_React$Component) {
                 }),
               components: this.props.components,
             })
-          )
+          ),
+          this.props.helpButton &&
+            /*#__PURE__*/ React.createElement(
+              "span",
+              null,
+              /*#__PURE__*/ React.createElement(
+                _Tooltip["default"],
+                {
+                  title: localization.helpTitle,
+                },
+                /*#__PURE__*/ React.createElement(
+                  _IconButton["default"],
+                  {
+                    color: "inherit",
+                    onClick: this.help,
+                    "aria-label": localization.helpAriaLabel,
+                  },
+                  /*#__PURE__*/ React.createElement(this.props.icons.Help, null)
+                )
+              )
+            )
         );
       },
     },
@@ -704,6 +733,8 @@ MTableToolbar.defaultProps = {
     exportPDFName: "Export as PDF",
     importTitle: "Import",
     importAriaLabel: "Import",
+    helpTitle: "Help",
+    helpAriaLabel: "Help",
     searchTooltip: "Search",
     searchPlaceholder: "Search",
     searchAriaLabel: "Search",
@@ -762,6 +793,8 @@ MTableToolbar.propTypes = {
   exportPdf: _propTypes["default"].func,
   import: _propTypes["default"].func,
   importButton: _propTypes["default"].bool,
+  help: _propTypes["default"].func,
+  helpButton: _propTypes["default"].bool,
   classes: _propTypes["default"].object,
   searchAutoFocus: _propTypes["default"].bool,
 };

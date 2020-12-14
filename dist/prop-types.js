@@ -364,6 +364,8 @@ var propTypes = {
     hideFilterIcons: _propTypes["default"].bool,
     import: _propTypes["default"].func,
     importButton: _propTypes["default"].bool,
+    help: _propTypes["default"].func,
+    helpButton: _propTypes["default"].bool,
     initialPage: _propTypes["default"].number,
     maxBodyHeight: _propTypes["default"].oneOfType([
       _propTypes["default"].number,

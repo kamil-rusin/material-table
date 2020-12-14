@@ -991,6 +991,8 @@ export default class MaterialTable extends React.Component {
               exportPdf={props.options.exportPdf}
               importButton={props.options.importButton}
               import={props.options.import}
+              helpButton={props.options.helpButton}
+              help={props.options.help}
               getFieldValue={this.dataManager.getFieldValue}
               data={this.state.data}
               renderData={this.state.renderData}

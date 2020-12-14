@@ -323,6 +323,8 @@ export interface Options<RowData extends object> {
   hideFilterIcons?: boolean;
   import?: () => void;
   importButton?: boolean;
+  help?: () => void;
+  helpButton?: boolean;
   initialPage?: number;
   loadingType?: "overlay" | "linear";
   maxBodyHeight?: number | string;
@@ -410,6 +412,8 @@ export interface Localization {
     exportPDFName?: React.ReactNode;
     importTitle?: React.ReactNode;
     importAriaLabel?: string;
+    helpTitle?: React.ReactNode;
+    helpAriaLabel?: string;
     searchTooltip?: React.ReactNode;
     searchPlaceholder?: React.ReactNode;
     searchAriaLabel?: string;
