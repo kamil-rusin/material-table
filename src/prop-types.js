@@ -324,6 +324,8 @@ export const propTypes = {
     hideFilterIcons: PropTypes.bool,
     import: PropTypes.func,
     importButton: PropTypes.bool,
+    help: PropTypes.func,
+    helpButton: PropTypes.bool,
     initialPage: PropTypes.number,
     maxBodyHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     minBodyHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),

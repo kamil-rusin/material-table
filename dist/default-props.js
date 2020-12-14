@@ -255,6 +255,15 @@ var defaultProps = {
         "input_sharp"
       );
     }),
+    Help: _react["default"].forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react["default"].createElement(
+        _Icon["default"],
+        (0, _extends2["default"])({}, props, {
+          ref: ref,
+        }),
+        "help"
+      );
+    }),
     LastPage: _react["default"].forwardRef(function (props, ref) {
       return /*#__PURE__*/ _react["default"].createElement(
         _Icon["default"],
@@ -369,6 +378,7 @@ var defaultProps = {
     headerSelectionProps: {},
     hideFilterIcons: false,
     importButton: false,
+    helpButton: false,
     loadingType: "overlay",
     padding: "default",
     searchAutoFocus: false,

@@ -144,6 +144,11 @@ export const defaultProps = {
         input_sharp
       </Icon>
     )),
+    Help: React.forwardRef((props, ref) => (
+      <Icon {...props} ref={ref}>
+        help
+      </Icon>
+    )),
     LastPage: React.forwardRef((props, ref) => (
       <Icon {...props} ref={ref}>
         last_page
@@ -219,6 +224,7 @@ export const defaultProps = {
     headerSelectionProps: {},
     hideFilterIcons: false,
     importButton: false,
+    helpButton: false,
     loadingType: "overlay",
     padding: "default",
     searchAutoFocus: false,

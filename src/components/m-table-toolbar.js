@@ -128,6 +128,12 @@ export class MTableToolbar extends React.Component {
     }
   };
 
+  help = () => {
+    if (this.props.help) {
+      this.props.help();
+    }
+  };
+
   renderSearch() {
     const localization = {
       ...MTableToolbar.defaultProps.localization,
@@ -305,6 +311,19 @@ export class MTableToolbar extends React.Component {
             components={this.props.components}
           />
         </span>
+        {this.props.helpButton && (
+          <span>
+            <Tooltip title={localization.helpTitle}>
+              <IconButton
+                color="inherit"
+                onClick={this.help}
+                aria-label={localization.helpAriaLabel}
+              >
+                <this.props.icons.Help />
+              </IconButton>
+            </Tooltip>
+          </span>
+        )}
       </div>
     );
   }
@@ -412,6 +431,8 @@ MTableToolbar.defaultProps = {
     exportPDFName: "Export as PDF",
     importTitle: "Import",
     importAriaLabel: "Import",
+    helpTitle: "Help",
+    helpAriaLabel: "Help",
     searchTooltip: "Search",
     searchPlaceholder: "Search",
     searchAriaLabel: "Search",
@@ -462,6 +483,8 @@ MTableToolbar.propTypes = {
   exportPdf: PropTypes.func,
   import: PropTypes.func,
   importButton: PropTypes.bool,
+  help: PropTypes.func,
+  helpButton: PropTypes.bool,
   classes: PropTypes.object,
   searchAutoFocus: PropTypes.bool,
 };
