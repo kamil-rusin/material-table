@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true,
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _objectSpread2 = _interopRequireDefault(
   require("@babel/runtime/helpers/objectSpread")
@@ -62,15 +62,15 @@ var _ = require("..");
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = (0, _getPrototypeOf2["default"])(Derived),
+    var Super = (0, _getPrototypeOf2.default)(Derived),
       result;
     if (hasNativeReflectConstruct) {
-      var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor;
+      var NewTarget = (0, _getPrototypeOf2.default)(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
     } else {
       result = Super.apply(this, arguments);
     }
-    return (0, _possibleConstructorReturn2["default"])(this, result);
+    return (0, _possibleConstructorReturn2.default)(this, result);
   };
 }
 
@@ -88,17 +88,17 @@ function _isNativeReflectConstruct() {
 
 /* eslint-enable no-unused-vars */
 var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
-  (0, _inherits2["default"])(MTableEditCell, _React$Component);
+  (0, _inherits2.default)(MTableEditCell, _React$Component);
 
   var _super = _createSuper(MTableEditCell);
 
   function MTableEditCell(props) {
     var _this;
 
-    (0, _classCallCheck2["default"])(this, MTableEditCell);
+    (0, _classCallCheck2.default)(this, MTableEditCell);
     _this = _super.call(this, props);
-    (0, _defineProperty2["default"])(
-      (0, _assertThisInitialized2["default"])(_this),
+    (0, _defineProperty2.default)(
+      (0, _assertThisInitialized2.default)(_this),
       "getStyle",
       function () {
         var cellStyle = {
@@ -113,7 +113,7 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
         };
 
         if (typeof _this.props.columnDef.cellStyle === "function") {
-          cellStyle = (0, _objectSpread2["default"])(
+          cellStyle = (0, _objectSpread2.default)(
             {},
             cellStyle,
             _this.props.columnDef.cellStyle(
@@ -122,7 +122,7 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
             )
           );
         } else {
-          cellStyle = (0, _objectSpread2["default"])(
+          cellStyle = (0, _objectSpread2.default)(
             {},
             cellStyle,
             _this.props.columnDef.cellStyle
@@ -130,7 +130,7 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
         }
 
         if (typeof _this.props.cellEditable.cellStyle === "function") {
-          cellStyle = (0, _objectSpread2["default"])(
+          cellStyle = (0, _objectSpread2.default)(
             {},
             cellStyle,
             _this.props.cellEditable.cellStyle(
@@ -140,7 +140,7 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
             )
           );
         } else {
-          cellStyle = (0, _objectSpread2["default"])(
+          cellStyle = (0, _objectSpread2.default)(
             {},
             cellStyle,
             _this.props.cellEditable.cellStyle
@@ -150,8 +150,8 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
         return cellStyle;
       }
     );
-    (0, _defineProperty2["default"])(
-      (0, _assertThisInitialized2["default"])(_this),
+    (0, _defineProperty2.default)(
+      (0, _assertThisInitialized2.default)(_this),
       "handleKeyDown",
       function (e) {
         if (e.keyCode === 13) {
@@ -161,8 +161,8 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
         }
       }
     );
-    (0, _defineProperty2["default"])(
-      (0, _assertThisInitialized2["default"])(_this),
+    (0, _defineProperty2.default)(
+      (0, _assertThisInitialized2.default)(_this),
       "onApprove",
       function () {
         _this.setState(
@@ -187,7 +187,7 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
                   _this.props.columnDef
                 );
               })
-              ["catch"](function (error) {
+              .catch(function (error) {
                 _this.setState({
                   isLoading: false,
                 });
@@ -196,8 +196,8 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
         );
       }
     );
-    (0, _defineProperty2["default"])(
-      (0, _assertThisInitialized2["default"])(_this),
+    (0, _defineProperty2.default)(
+      (0, _assertThisInitialized2.default)(_this),
       "onCancel",
       function () {
         _this.props.onCellEditFinished(
@@ -213,7 +213,7 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
     return _this;
   }
 
-  (0, _createClass2["default"])(MTableEditCell, [
+  (0, _createClass2.default)(MTableEditCell, [
     {
       key: "renderActions",
       value: function renderActions() {
@@ -227,7 +227,7 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
                 width: 60,
               },
             },
-            /*#__PURE__*/ React.createElement(_CircularProgress["default"], {
+            /*#__PURE__*/ React.createElement(_CircularProgress.default, {
               size: 20,
             })
           );
@@ -263,7 +263,7 @@ var MTableEditCell = /*#__PURE__*/ (function (_React$Component) {
         var _this2 = this;
 
         return /*#__PURE__*/ React.createElement(
-          _TableCell["default"],
+          _TableCell.default,
           {
             size: this.props.size,
             style: this.getStyle(),
@@ -314,20 +314,20 @@ MTableEditCell.defaultProps = {
   columnDef: {},
 };
 MTableEditCell.propTypes = {
-  cellEditable: _propTypes["default"].object.isRequired,
-  columnDef: _propTypes["default"].object.isRequired,
-  components: _propTypes["default"].object.isRequired,
-  errorState: _propTypes["default"].oneOfType([
-    _propTypes["default"].object,
-    _propTypes["default"].bool,
+  cellEditable: _propTypes.default.object.isRequired,
+  columnDef: _propTypes.default.object.isRequired,
+  components: _propTypes.default.object.isRequired,
+  errorState: _propTypes.default.oneOfType([
+    _propTypes.default.object,
+    _propTypes.default.bool,
   ]),
-  icons: _propTypes["default"].object.isRequired,
-  localization: _propTypes["default"].object.isRequired,
-  onCellEditFinished: _propTypes["default"].func.isRequired,
-  rowData: _propTypes["default"].object.isRequired,
-  size: _propTypes["default"].string,
+  icons: _propTypes.default.object.isRequired,
+  localization: _propTypes.default.object.isRequired,
+  onCellEditFinished: _propTypes.default.func.isRequired,
+  rowData: _propTypes.default.object.isRequired,
+  size: _propTypes.default.string,
 };
 
-var _default = (0, _withTheme["default"])(MTableEditCell);
+var _default = (0, _withTheme.default)(MTableEditCell);
 
-exports["default"] = _default;
+exports.default = _default;

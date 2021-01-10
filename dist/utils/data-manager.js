@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true,
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _objectSpread2 = _interopRequireDefault(
   require("@babel/runtime/helpers/objectSpread")
@@ -35,55 +35,53 @@ var DataManager = /*#__PURE__*/ (function () {
   function DataManager() {
     var _this = this;
 
-    (0, _classCallCheck2["default"])(this, DataManager);
-    (0, _defineProperty2["default"])(this, "applyFilters", false);
-    (0, _defineProperty2["default"])(this, "applySearch", false);
-    (0, _defineProperty2["default"])(this, "applySort", false);
-    (0, _defineProperty2["default"])(this, "currentPage", 0);
-    (0, _defineProperty2["default"])(this, "detailPanelType", "multiple");
-    (0, _defineProperty2["default"])(this, "lastDetailPanelRow", undefined);
-    (0, _defineProperty2["default"])(this, "lastEditingRow", undefined);
-    (0, _defineProperty2["default"])(this, "orderBy", -1);
-    (0, _defineProperty2["default"])(this, "orderDirection", "");
-    (0, _defineProperty2["default"])(this, "pageSize", 5);
-    (0, _defineProperty2["default"])(this, "paging", true);
-    (0, _defineProperty2["default"])(this, "parentFunc", null);
-    (0, _defineProperty2["default"])(this, "searchText", "");
-    (0, _defineProperty2["default"])(this, "selectedCount", 0);
-    (0, _defineProperty2["default"])(this, "treefiedDataLength", 0);
-    (0, _defineProperty2["default"])(this, "treeDataMaxLevel", 0);
-    (0, _defineProperty2["default"])(this, "groupedDataLength", 0);
-    (0, _defineProperty2["default"])(this, "defaultExpanded", false);
-    (0, _defineProperty2["default"])(this, "bulkEditOpen", false);
-    (0, _defineProperty2["default"])(this, "bulkEditChangedRows", {});
-    (0, _defineProperty2["default"])(this, "data", []);
-    (0, _defineProperty2["default"])(this, "columns", []);
-    (0, _defineProperty2["default"])(this, "filteredData", []);
-    (0, _defineProperty2["default"])(this, "searchedData", []);
-    (0, _defineProperty2["default"])(this, "groupedData", []);
-    (0, _defineProperty2["default"])(this, "treefiedData", []);
-    (0, _defineProperty2["default"])(this, "sortedData", []);
-    (0, _defineProperty2["default"])(this, "pagedData", []);
-    (0, _defineProperty2["default"])(this, "renderData", []);
-    (0, _defineProperty2["default"])(this, "filtered", false);
-    (0, _defineProperty2["default"])(this, "searched", false);
-    (0, _defineProperty2["default"])(this, "grouped", false);
-    (0, _defineProperty2["default"])(this, "treefied", false);
-    (0, _defineProperty2["default"])(this, "sorted", false);
-    (0, _defineProperty2["default"])(this, "paged", false);
-    (0, _defineProperty2["default"])(this, "rootGroupsIndex", {});
-    (0, _defineProperty2["default"])(this, "startCellEditable", function (
+    (0, _classCallCheck2.default)(this, DataManager);
+    (0, _defineProperty2.default)(this, "applyFilters", false);
+    (0, _defineProperty2.default)(this, "applySearch", false);
+    (0, _defineProperty2.default)(this, "applySort", false);
+    (0, _defineProperty2.default)(this, "currentPage", 0);
+    (0, _defineProperty2.default)(this, "detailPanelType", "multiple");
+    (0, _defineProperty2.default)(this, "lastDetailPanelRow", undefined);
+    (0, _defineProperty2.default)(this, "lastEditingRow", undefined);
+    (0, _defineProperty2.default)(this, "orderBy", -1);
+    (0, _defineProperty2.default)(this, "orderDirection", "");
+    (0, _defineProperty2.default)(this, "pageSize", 5);
+    (0, _defineProperty2.default)(this, "paging", true);
+    (0, _defineProperty2.default)(this, "parentFunc", null);
+    (0, _defineProperty2.default)(this, "searchText", "");
+    (0, _defineProperty2.default)(this, "selectedCount", 0);
+    (0, _defineProperty2.default)(this, "treefiedDataLength", 0);
+    (0, _defineProperty2.default)(this, "treeDataMaxLevel", 0);
+    (0, _defineProperty2.default)(this, "groupedDataLength", 0);
+    (0, _defineProperty2.default)(this, "defaultExpanded", false);
+    (0, _defineProperty2.default)(this, "bulkEditOpen", false);
+    (0, _defineProperty2.default)(this, "bulkEditChangedRows", {});
+    (0, _defineProperty2.default)(this, "data", []);
+    (0, _defineProperty2.default)(this, "columns", []);
+    (0, _defineProperty2.default)(this, "filteredData", []);
+    (0, _defineProperty2.default)(this, "searchedData", []);
+    (0, _defineProperty2.default)(this, "groupedData", []);
+    (0, _defineProperty2.default)(this, "treefiedData", []);
+    (0, _defineProperty2.default)(this, "sortedData", []);
+    (0, _defineProperty2.default)(this, "pagedData", []);
+    (0, _defineProperty2.default)(this, "renderData", []);
+    (0, _defineProperty2.default)(this, "filtered", false);
+    (0, _defineProperty2.default)(this, "searched", false);
+    (0, _defineProperty2.default)(this, "grouped", false);
+    (0, _defineProperty2.default)(this, "treefied", false);
+    (0, _defineProperty2.default)(this, "sorted", false);
+    (0, _defineProperty2.default)(this, "paged", false);
+    (0, _defineProperty2.default)(this, "rootGroupsIndex", {});
+    (0, _defineProperty2.default)(this, "startCellEditable", function (
       rowData,
       columnDef
     ) {
       rowData.tableData.editCellList = [].concat(
-        (0, _toConsumableArray2["default"])(
-          rowData.tableData.editCellList || []
-        ),
+        (0, _toConsumableArray2.default)(rowData.tableData.editCellList || []),
         [columnDef]
       );
     });
-    (0, _defineProperty2["default"])(this, "finishCellEditable", function (
+    (0, _defineProperty2.default)(this, "finishCellEditable", function (
       rowData,
       columnDef
     ) {
@@ -97,14 +95,14 @@ var DataManager = /*#__PURE__*/ (function () {
         }
       }
     });
-    (0, _defineProperty2["default"])(
+    (0, _defineProperty2.default)(
       this,
       "clearBulkEditChangedRows",
       function () {
         _this.bulkEditChangedRows = {};
       }
     );
-    (0, _defineProperty2["default"])(this, "onBulkEditRowChanged", function (
+    (0, _defineProperty2.default)(this, "onBulkEditRowChanged", function (
       oldData,
       newData
     ) {
@@ -113,9 +111,7 @@ var DataManager = /*#__PURE__*/ (function () {
         newData: newData,
       };
     });
-    (0, _defineProperty2["default"])(this, "expandTreeForNodes", function (
-      data
-    ) {
+    (0, _defineProperty2.default)(this, "expandTreeForNodes", function (data) {
       data.forEach(function (row) {
         var currentRow = row;
 
@@ -130,7 +126,7 @@ var DataManager = /*#__PURE__*/ (function () {
         }
       });
     });
-    (0, _defineProperty2["default"])(this, "findDataByPath", function (
+    (0, _defineProperty2.default)(this, "findDataByPath", function (
       renderData,
       path
     ) {
@@ -169,7 +165,7 @@ var DataManager = /*#__PURE__*/ (function () {
         return _node;
       }
     });
-    (0, _defineProperty2["default"])(this, "getFieldValue", function (
+    (0, _defineProperty2.default)(this, "getFieldValue", function (
       rowData,
       columnDef
     ) {
@@ -188,7 +184,7 @@ var DataManager = /*#__PURE__*/ (function () {
 
       return value;
     });
-    (0, _defineProperty2["default"])(this, "getRenderState", function () {
+    (0, _defineProperty2.default)(this, "getRenderState", function () {
       if (_this.filtered === false) {
         _this.filterData();
       }
@@ -230,9 +226,9 @@ var DataManager = /*#__PURE__*/ (function () {
         groupedDataLength: _this.groupedDataLength,
       };
     });
-    (0, _defineProperty2["default"])(this, "filterData", function () {
+    (0, _defineProperty2.default)(this, "filterData", function () {
       _this.searched = _this.grouped = _this.treefied = _this.sorted = _this.paged = false;
-      _this.filteredData = (0, _toConsumableArray2["default"])(_this.data);
+      _this.filteredData = (0, _toConsumableArray2.default)(_this.data);
 
       if (_this.applyFilters) {
         _this.columns
@@ -295,20 +291,20 @@ var DataManager = /*#__PURE__*/ (function () {
                     var selectedDateToCompare = "";
 
                     if (type === "date") {
-                      currentDateToCompare = (0, _format["default"])(
+                      currentDateToCompare = (0, _format.default)(
                         currentDate,
                         "MM/dd/yyyy"
                       );
-                      selectedDateToCompare = (0, _format["default"])(
+                      selectedDateToCompare = (0, _format.default)(
                         selectedDate,
                         "MM/dd/yyyy"
                       );
                     } else if (type === "datetime") {
-                      currentDateToCompare = (0, _format["default"])(
+                      currentDateToCompare = (0, _format.default)(
                         currentDate,
                         "MM/dd/yyyy - HH:mm"
                       );
-                      selectedDateToCompare = (0, _format["default"])(
+                      selectedDateToCompare = (0, _format.default)(
                         selectedDate,
                         "MM/dd/yyyy - HH:mm"
                       );
@@ -327,7 +323,7 @@ var DataManager = /*#__PURE__*/ (function () {
 
                   if (currentHour) {
                     var selectedHour = tableData.filterValue;
-                    var currentHourToCompare = (0, _format["default"])(
+                    var currentHourToCompare = (0, _format.default)(
                       selectedHour,
                       "HH:mm"
                     );
@@ -355,11 +351,9 @@ var DataManager = /*#__PURE__*/ (function () {
 
       _this.filtered = true;
     });
-    (0, _defineProperty2["default"])(this, "searchData", function () {
+    (0, _defineProperty2.default)(this, "searchData", function () {
       _this.grouped = _this.treefied = _this.sorted = _this.paged = false;
-      _this.searchedData = (0, _toConsumableArray2["default"])(
-        _this.filteredData
-      );
+      _this.searchedData = (0, _toConsumableArray2.default)(_this.filteredData);
 
       if (_this.searchText && _this.applySearch) {
         var trimmedSearchText = _this.searchText.trim();
@@ -396,7 +390,7 @@ var DataManager = /*#__PURE__*/ (function () {
     });
   }
 
-  (0, _createClass2["default"])(DataManager, [
+  (0, _createClass2.default)(DataManager, [
     {
       key: "setData",
       value: function setData(data) {
@@ -404,7 +398,7 @@ var DataManager = /*#__PURE__*/ (function () {
 
         this.selectedCount = 0;
         this.data = data.map(function (row, index) {
-          row.tableData = (0, _objectSpread2["default"])({}, row.tableData, {
+          row.tableData = (0, _objectSpread2.default)({}, row.tableData, {
             id: index,
           });
 
@@ -421,11 +415,13 @@ var DataManager = /*#__PURE__*/ (function () {
       key: "setColumns",
       value: function setColumns(columns) {
         var undefinedWidthColumns = columns.filter(function (c) {
-          return c.width === undefined && !c.hidden;
+          return c.width === undefined && c.columnDef
+            ? c.columnDef.tableData.width === undefined
+            : true && !c.hidden;
         });
         var usedWidth = ["0px"];
         this.columns = columns.map(function (columnDef, index) {
-          columnDef.tableData = (0, _objectSpread2["default"])(
+          columnDef.tableData = (0, _objectSpread2.default)(
             {
               columnOrder: index,
               filterValue: columnDef.defaultFilter,
@@ -947,7 +943,7 @@ var DataManager = /*#__PURE__*/ (function () {
 
         this.sorted = this.paged = false;
         this.groupedDataLength = 0;
-        var tmpData = (0, _toConsumableArray2["default"])(this.searchedData);
+        var tmpData = (0, _toConsumableArray2.default)(this.searchedData);
         var groups = this.columns
           .filter(function (col) {
             return col.tableData.groupOrder > -1;
@@ -970,7 +966,7 @@ var DataManager = /*#__PURE__*/ (function () {
 
               if (!group) {
                 var path = [].concat(
-                  (0, _toConsumableArray2["default"])(o.path || []),
+                  (0, _toConsumableArray2.default)(o.path || []),
                   [value]
                 );
                 var oldGroup = _this5.findGroupByGroupPath(
@@ -1051,7 +1047,7 @@ var DataManager = /*#__PURE__*/ (function () {
 
             addRow(parent);
             rowData.tableData.path = [].concat(
-              (0, _toConsumableArray2["default"])(parent.tableData.path),
+              (0, _toConsumableArray2.default)(parent.tableData.path),
               [parent.tableData.childRows.length - 1]
             );
             _this6.treeDataMaxLevel = Math.max(
@@ -1154,9 +1150,7 @@ var DataManager = /*#__PURE__*/ (function () {
         this.paged = false;
 
         if (this.isDataType("group")) {
-          this.sortedData = (0, _toConsumableArray2["default"])(
-            this.groupedData
-          );
+          this.sortedData = (0, _toConsumableArray2.default)(this.groupedData);
           var groups = this.columns
             .filter(function (col) {
               return col.tableData.groupOrder > -1;
@@ -1207,9 +1201,7 @@ var DataManager = /*#__PURE__*/ (function () {
 
           sortGroupData(this.sortedData, 1);
         } else if (this.isDataType("tree")) {
-          this.sortedData = (0, _toConsumableArray2["default"])(
-            this.treefiedData
-          );
+          this.sortedData = (0, _toConsumableArray2.default)(this.treefiedData);
 
           if (this.orderBy != -1) {
             this.sortedData = this.sortList(this.sortedData);
@@ -1228,9 +1220,7 @@ var DataManager = /*#__PURE__*/ (function () {
             sortTree(this.sortedData);
           }
         } else if (this.isDataType("normal")) {
-          this.sortedData = (0, _toConsumableArray2["default"])(
-            this.searchedData
-          );
+          this.sortedData = (0, _toConsumableArray2.default)(this.searchedData);
 
           if (this.orderBy != -1 && this.applySort) {
             this.sortedData = this.sortList(this.sortedData);
@@ -1243,7 +1233,7 @@ var DataManager = /*#__PURE__*/ (function () {
     {
       key: "pageData",
       value: function pageData() {
-        this.pagedData = (0, _toConsumableArray2["default"])(this.sortedData);
+        this.pagedData = (0, _toConsumableArray2.default)(this.sortedData);
 
         if (this.paging) {
           var startIndex = this.currentPage * this.pageSize;
@@ -1258,4 +1248,4 @@ var DataManager = /*#__PURE__*/ (function () {
   return DataManager;
 })();
 
-exports["default"] = DataManager;
+exports.default = DataManager;

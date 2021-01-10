@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true,
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _toConsumableArray2 = _interopRequireDefault(
   require("@babel/runtime/helpers/toConsumableArray")
@@ -76,15 +76,15 @@ var CommonValues = _interopRequireWildcard(require("../utils/common-values"));
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = (0, _getPrototypeOf2["default"])(Derived),
+    var Super = (0, _getPrototypeOf2.default)(Derived),
       result;
     if (hasNativeReflectConstruct) {
-      var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor;
+      var NewTarget = (0, _getPrototypeOf2.default)(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
     } else {
       result = Super.apply(this, arguments);
     }
-    return (0, _possibleConstructorReturn2["default"])(this, result);
+    return (0, _possibleConstructorReturn2.default)(this, result);
   };
 }
 
@@ -102,14 +102,14 @@ function _isNativeReflectConstruct() {
 
 /* eslint-enable no-unused-vars */
 var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
-  (0, _inherits2["default"])(MTableBodyRow, _React$Component);
+  (0, _inherits2.default)(MTableBodyRow, _React$Component);
 
   var _super = _createSuper(MTableBodyRow);
 
   function MTableBodyRow() {
     var _this;
 
-    (0, _classCallCheck2["default"])(this, MTableBodyRow);
+    (0, _classCallCheck2.default)(this, MTableBodyRow);
 
     for (
       var _len = arguments.length, args = new Array(_len), _key = 0;
@@ -120,8 +120,8 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
     }
 
     _this = _super.call.apply(_super, [this].concat(args));
-    (0, _defineProperty2["default"])(
-      (0, _assertThisInitialized2["default"])(_this),
+    (0, _defineProperty2.default)(
+      (0, _assertThisInitialized2.default)(_this),
       "rotateIconStyle",
       function (isOpen) {
         return {
@@ -132,7 +132,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
     return _this;
   }
 
-  (0, _createClass2["default"])(MTableBodyRow, [
+  (0, _createClass2.default)(MTableBodyRow, [
     {
       key: "renderColumns",
       value: function renderColumns() {
@@ -184,7 +184,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
                   size: size,
                   errorState: _this2.props.errorState,
                   icons: _this2.props.icons,
-                  columnDef: (0, _objectSpread2["default"])(
+                  columnDef: (0, _objectSpread2.default)(
                     {
                       cellStyle: _this2.props.options.cellStyle,
                     },
@@ -216,12 +216,12 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
         var actions = CommonValues.rowActions(this.props);
         var width = actions.length * CommonValues.baseIconSize(this.props);
         return /*#__PURE__*/ React.createElement(
-          _TableCell["default"],
+          _TableCell.default,
           {
             size: size,
             padding: "none",
             key: "key-actions-column",
-            style: (0, _objectSpread2["default"])(
+            style: (0, _objectSpread2.default)(
               {
                 width: width,
                 padding: "0px 5px",
@@ -274,7 +274,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
                 marginLeft: 5 + this.props.level * 9,
               };
         return /*#__PURE__*/ React.createElement(
-          _TableCell["default"],
+          _TableCell.default,
           {
             size: size,
             padding: "none",
@@ -284,8 +284,8 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
             },
           },
           /*#__PURE__*/ React.createElement(
-            _Checkbox["default"],
-            (0, _extends2["default"])(
+            _Checkbox.default,
+            (0, _extends2.default)(
               {
                 size: size,
                 checked: this.props.data.tableData.checked === true,
@@ -319,25 +319,21 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
           var icon = _ref.icon,
             iconProps = _ref.iconProps;
           return typeof icon === "string"
-            ? /*#__PURE__*/ React.createElement(
-                _Icon["default"],
-                iconProps,
-                icon
-              )
+            ? /*#__PURE__*/ React.createElement(_Icon.default, iconProps, icon)
             : React.createElement(
                 icon,
-                (0, _objectSpread2["default"])({}, iconProps)
+                (0, _objectSpread2.default)({}, iconProps)
               );
         };
 
         if (typeof this.props.detailPanel == "function") {
           return /*#__PURE__*/ React.createElement(
-            _TableCell["default"],
+            _TableCell.default,
             {
               size: size,
               padding: "none",
               key: "key-detail-panel-column",
-              style: (0, _objectSpread2["default"])(
+              style: (0, _objectSpread2.default)(
                 {
                   width: 42,
                   textAlign: "center",
@@ -346,10 +342,10 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
               ),
             },
             /*#__PURE__*/ React.createElement(
-              _IconButton["default"],
+              _IconButton.default,
               {
                 size: size,
-                style: (0, _objectSpread2["default"])(
+                style: (0, _objectSpread2.default)(
                   {
                     transition: "all ease 200ms",
                   },
@@ -374,7 +370,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
           );
         } else {
           return /*#__PURE__*/ React.createElement(
-            _TableCell["default"],
+            _TableCell.default,
             {
               size: size,
               padding: "none",
@@ -383,7 +379,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
             /*#__PURE__*/ React.createElement(
               "div",
               {
-                style: (0, _objectSpread2["default"])(
+                style: (0, _objectSpread2.default)(
                   {
                     width: 42 * this.props.detailPanel.length,
                     textAlign: "center",
@@ -429,11 +425,11 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
                 }
 
                 iconButton = /*#__PURE__*/ React.createElement(
-                  _IconButton["default"],
+                  _IconButton.default,
                   {
                     size: size,
                     key: "key-detail-panel-" + index,
-                    style: (0, _objectSpread2["default"])(
+                    style: (0, _objectSpread2.default)(
                       {
                         transition: "all ease 200ms",
                       },
@@ -454,7 +450,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
 
                 if (panel.tooltip) {
                   iconButton = /*#__PURE__*/ React.createElement(
-                    _Tooltip["default"],
+                    _Tooltip.default,
                     {
                       key: "key-detail-panel-" + index,
                       title: panel.tooltip,
@@ -482,7 +478,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
           this.props.data.tableData.childRows.length > 0
         ) {
           return /*#__PURE__*/ React.createElement(
-            _TableCell["default"],
+            _TableCell.default,
             {
               size: size,
               padding: "none",
@@ -492,10 +488,10 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
               },
             },
             /*#__PURE__*/ React.createElement(
-              _IconButton["default"],
+              _IconButton.default,
               {
                 size: size,
-                style: (0, _objectSpread2["default"])(
+                style: (0, _objectSpread2.default)(
                   {
                     transition: "all ease 200ms",
                     marginLeft: this.props.level * 9,
@@ -518,7 +514,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
             )
           );
         } else {
-          return /*#__PURE__*/ React.createElement(_TableCell["default"], {
+          return /*#__PURE__*/ React.createElement(_TableCell.default, {
             padding: "none",
             key: "key-tree-data-column",
           });
@@ -533,7 +529,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
         };
 
         if (typeof this.props.options.rowStyle === "function") {
-          style = (0, _objectSpread2["default"])(
+          style = (0, _objectSpread2.default)(
             {},
             style,
             this.props.options.rowStyle(
@@ -544,7 +540,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
             )
           );
         } else if (this.props.options.rowStyle) {
-          style = (0, _objectSpread2["default"])(
+          style = (0, _objectSpread2.default)(
             {},
             style,
             this.props.options.rowStyle
@@ -617,7 +613,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
             renderColumns.splice(
               0,
               0,
-              /*#__PURE__*/ React.createElement(_TableCell["default"], {
+              /*#__PURE__*/ React.createElement(_TableCell.default, {
                 size: size,
                 padding: "none",
                 key: "key-group-cell" + columnDef.tableData.id,
@@ -648,7 +644,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
           onCellEditStarted = _this$props.onCellEditStarted,
           onCellEditFinished = _this$props.onCellEditFinished,
           scrollWidth = _this$props.scrollWidth,
-          rowProps = (0, _objectWithoutProperties2["default"])(_this$props, [
+          rowProps = (0, _objectWithoutProperties2.default)(_this$props, [
             "icons",
             "data",
             "columns",
@@ -677,8 +673,8 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
           React.Fragment,
           null,
           /*#__PURE__*/ React.createElement(
-            _TableRow["default"],
-            (0, _extends2["default"])(
+            _TableRow.default,
+            (0, _extends2.default)(
               {
                 selected: hasAnyEditingRow,
               },
@@ -711,10 +707,10 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
           this.props.data.tableData &&
             this.props.data.tableData.showDetailPanel &&
             /*#__PURE__*/ React.createElement(
-              _TableRow["default"], // selected={this.props.index % 2 === 0}
+              _TableRow.default, // selected={this.props.index % 2 === 0}
               null,
               /*#__PURE__*/ React.createElement(
-                _TableCell["default"],
+                _TableCell.default,
                 {
                   size: size,
                   colSpan: renderColumns.length,
@@ -751,13 +747,13 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
               } else {
                 return /*#__PURE__*/ React.createElement(
                   _this6.props.components.Row,
-                  (0, _extends2["default"])({}, _this6.props, {
+                  (0, _extends2.default)({}, _this6.props, {
                     data: data,
                     index: index,
                     key: index,
                     level: _this6.props.level + 1,
                     path: [].concat(
-                      (0, _toConsumableArray2["default"])(_this6.props.path),
+                      (0, _toConsumableArray2.default)(_this6.props.path),
                       [index]
                     ),
                     onEditingCanceled: onEditingCanceled,
@@ -779,7 +775,7 @@ var MTableBodyRow = /*#__PURE__*/ (function (_React$Component) {
   return MTableBodyRow;
 })(React.Component);
 
-exports["default"] = MTableBodyRow;
+exports.default = MTableBodyRow;
 MTableBodyRow.defaultProps = {
   actions: [],
   index: 0,
@@ -788,32 +784,32 @@ MTableBodyRow.defaultProps = {
   path: [],
 };
 MTableBodyRow.propTypes = {
-  actions: _propTypes["default"].array,
-  icons: _propTypes["default"].any.isRequired,
-  index: _propTypes["default"].number.isRequired,
-  data: _propTypes["default"].object.isRequired,
-  detailPanel: _propTypes["default"].oneOfType([
-    _propTypes["default"].func,
-    _propTypes["default"].arrayOf(
-      _propTypes["default"].oneOfType([
-        _propTypes["default"].object,
-        _propTypes["default"].func,
+  actions: _propTypes.default.array,
+  icons: _propTypes.default.any.isRequired,
+  index: _propTypes.default.number.isRequired,
+  data: _propTypes.default.object.isRequired,
+  detailPanel: _propTypes.default.oneOfType([
+    _propTypes.default.func,
+    _propTypes.default.arrayOf(
+      _propTypes.default.oneOfType([
+        _propTypes.default.object,
+        _propTypes.default.func,
       ])
     ),
   ]),
-  hasAnyEditingRow: _propTypes["default"].bool,
-  options: _propTypes["default"].object.isRequired,
-  onRowSelected: _propTypes["default"].func,
-  path: _propTypes["default"].arrayOf(_propTypes["default"].number),
-  treeDataMaxLevel: _propTypes["default"].number,
-  getFieldValue: _propTypes["default"].func.isRequired,
-  columns: _propTypes["default"].array,
-  onToggleDetailPanel: _propTypes["default"].func.isRequired,
-  onRowClick: _propTypes["default"].func,
-  onEditingApproved: _propTypes["default"].func,
-  onEditingCanceled: _propTypes["default"].func,
-  errorState: _propTypes["default"].oneOfType([
-    _propTypes["default"].object,
-    _propTypes["default"].bool,
+  hasAnyEditingRow: _propTypes.default.bool,
+  options: _propTypes.default.object.isRequired,
+  onRowSelected: _propTypes.default.func,
+  path: _propTypes.default.arrayOf(_propTypes.default.number),
+  treeDataMaxLevel: _propTypes.default.number,
+  getFieldValue: _propTypes.default.func.isRequired,
+  columns: _propTypes.default.array,
+  onToggleDetailPanel: _propTypes.default.func.isRequired,
+  onRowClick: _propTypes.default.func,
+  onEditingApproved: _propTypes.default.func,
+  onEditingCanceled: _propTypes.default.func,
+  errorState: _propTypes.default.oneOfType([
+    _propTypes.default.object,
+    _propTypes.default.bool,
   ]),
 };

@@ -38,7 +38,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _colorManipulator = require("@material-ui/core/styles/colorManipulator");
 
 var OverlayLoading = function OverlayLoading(props) {
-  return /*#__PURE__*/ _react["default"].createElement(
+  return /*#__PURE__*/ _react.default.createElement(
     "div",
     {
       style: {
@@ -51,7 +51,7 @@ var OverlayLoading = function OverlayLoading(props) {
         ),
       },
     },
-    /*#__PURE__*/ _react["default"].createElement(
+    /*#__PURE__*/ _react.default.createElement(
       "div",
       {
         style: {
@@ -62,8 +62,8 @@ var OverlayLoading = function OverlayLoading(props) {
           textAlign: "center",
         },
       },
-      /*#__PURE__*/ _react["default"].createElement(
-        _CircularProgress["default"],
+      /*#__PURE__*/ _react.default.createElement(
+        _CircularProgress.default,
         null
       )
     )
@@ -71,11 +71,11 @@ var OverlayLoading = function OverlayLoading(props) {
 };
 
 OverlayLoading.propTypes = {
-  theme: _propTypes["default"].any,
+  theme: _propTypes.default.any,
 };
 
 var OverlayError = function OverlayError(props) {
-  return /*#__PURE__*/ _react["default"].createElement(
+  return /*#__PURE__*/ _react.default.createElement(
     "div",
     {
       style: {
@@ -88,7 +88,7 @@ var OverlayError = function OverlayError(props) {
         ),
       },
     },
-    /*#__PURE__*/ _react["default"].createElement(
+    /*#__PURE__*/ _react.default.createElement(
       "div",
       {
         style: {
@@ -99,13 +99,13 @@ var OverlayError = function OverlayError(props) {
           textAlign: "center",
         },
       },
-      /*#__PURE__*/ _react["default"].createElement(
+      /*#__PURE__*/ _react.default.createElement(
         "span",
         null,
         props.error.message
       ),
       " ",
-      /*#__PURE__*/ _react["default"].createElement(props.icon, {
+      /*#__PURE__*/ _react.default.createElement(props.icon, {
         onClick: props.retry,
         style: {
           cursor: "pointer",
@@ -118,19 +118,19 @@ var OverlayError = function OverlayError(props) {
 };
 
 OverlayError.propTypes = {
-  error: _propTypes["default"].oneOfType([
-    _propTypes["default"].object,
-    _propTypes["default"].string,
+  error: _propTypes.default.oneOfType([
+    _propTypes.default.object,
+    _propTypes.default.string,
   ]),
-  retry: _propTypes["default"].func,
-  theme: _propTypes["default"].any,
-  icon: _propTypes["default"].any,
+  retry: _propTypes.default.func,
+  theme: _propTypes.default.any,
+  icon: _propTypes.default.any,
 };
 
 var Container = function Container(props) {
-  return /*#__PURE__*/ _react["default"].createElement(
-    _Paper["default"],
-    (0, _extends2["default"])(
+  return /*#__PURE__*/ _react.default.createElement(
+    _Paper.default,
+    (0, _extends2.default)(
       {
         elevation: 2,
       },
@@ -158,191 +158,191 @@ var defaultProps = {
     Header: MComponents.MTableHeader,
     OverlayLoading: OverlayLoading,
     OverlayError: OverlayError,
-    Pagination: _TablePagination["default"],
+    Pagination: _TablePagination.default,
     Row: MComponents.MTableBodyRow,
     Toolbar: MComponents.MTableToolbar,
   },
   data: [],
   icons: {
     /* eslint-disable react/display-name */
-    Add: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Add: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "add_box"
       );
     }),
-    Check: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Check: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "check"
       );
     }),
-    Clear: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Clear: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "clear"
       );
     }),
-    Delete: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Delete: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "delete_outline"
       );
     }),
-    DetailPanel: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    DetailPanel: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "chevron_right"
       );
     }),
-    Edit: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Edit: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "edit"
       );
     }),
-    Export: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Export: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "save_alt"
       );
     }),
-    Filter: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Filter: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "filter_list"
       );
     }),
-    FirstPage: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    FirstPage: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "first_page"
       );
     }),
-    Import: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Import: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "input_sharp"
       );
     }),
-    LastPage: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    LastPage: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "last_page"
       );
     }),
-    NextPage: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    NextPage: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "chevron_right"
       );
     }),
-    PreviousPage: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    PreviousPage: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "chevron_left"
       );
     }),
-    ResetSearch: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    ResetSearch: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "clear"
       );
     }),
-    Resize: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Resize: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
-          style: (0, _objectSpread2["default"])({}, props.style, {
+          style: (0, _objectSpread2.default)({}, props.style, {
             transform: "rotate(90deg)",
           }),
         }),
         "drag_handle"
       );
     }),
-    Search: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Search: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "search"
       );
     }),
-    SortArrow: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    SortArrow: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "arrow_downward"
       );
     }),
-    ThirdStateCheck: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    ThirdStateCheck: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "remove"
       );
     }),
-    ViewColumn: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    ViewColumn: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "view_column"
       );
     }),
-    Retry: _react["default"].forwardRef(function (props, ref) {
-      return /*#__PURE__*/ _react["default"].createElement(
-        _Icon["default"],
-        (0, _extends2["default"])({}, props, {
+    Retry: _react.default.forwardRef(function (props, ref) {
+      return /*#__PURE__*/ _react.default.createElement(
+        _Icon.default,
+        (0, _extends2.default)({}, props, {
           ref: ref,
         }),
         "replay"

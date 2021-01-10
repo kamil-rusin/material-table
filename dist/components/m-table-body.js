@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true,
 });
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _toConsumableArray2 = _interopRequireDefault(
   require("@babel/runtime/helpers/toConsumableArray")
@@ -50,15 +50,15 @@ var React = _interopRequireWildcard(require("react"));
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = _isNativeReflectConstruct();
   return function _createSuperInternal() {
-    var Super = (0, _getPrototypeOf2["default"])(Derived),
+    var Super = (0, _getPrototypeOf2.default)(Derived),
       result;
     if (hasNativeReflectConstruct) {
-      var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor;
+      var NewTarget = (0, _getPrototypeOf2.default)(this).constructor;
       result = Reflect.construct(Super, arguments, NewTarget);
     } else {
       result = Super.apply(this, arguments);
     }
-    return (0, _possibleConstructorReturn2["default"])(this, result);
+    return (0, _possibleConstructorReturn2.default)(this, result);
   };
 }
 
@@ -76,21 +76,21 @@ function _isNativeReflectConstruct() {
 
 /* eslint-enable no-unused-vars */
 var MTableBody = /*#__PURE__*/ (function (_React$Component) {
-  (0, _inherits2["default"])(MTableBody, _React$Component);
+  (0, _inherits2.default)(MTableBody, _React$Component);
 
   var _super = _createSuper(MTableBody);
 
   function MTableBody() {
-    (0, _classCallCheck2["default"])(this, MTableBody);
+    (0, _classCallCheck2.default)(this, MTableBody);
     return _super.apply(this, arguments);
   }
 
-  (0, _createClass2["default"])(MTableBody, [
+  (0, _createClass2.default)(MTableBody, [
     {
       key: "renderEmpty",
       value: function renderEmpty(emptyRowCount, renderData) {
         var rowHeight = this.props.options.padding === "default" ? 49 : 36;
-        var localization = (0, _objectSpread2["default"])(
+        var localization = (0, _objectSpread2.default)(
           {},
           MTableBody.defaultProps.localization,
           this.props.localization
@@ -124,7 +124,7 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
           }
 
           return /*#__PURE__*/ React.createElement(
-            _TableRow["default"],
+            _TableRow.default,
             {
               style: {
                 height:
@@ -137,7 +137,7 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
               key: "empty-" + 0,
             },
             /*#__PURE__*/ React.createElement(
-              _TableCell["default"],
+              _TableCell.default,
               {
                 style: {
                   paddingTop: 0,
@@ -160,9 +160,9 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
           return /*#__PURE__*/ React.createElement(
             React.Fragment,
             null,
-            (0, _toConsumableArray2["default"])(Array(emptyRowCount)).map(
+            (0, _toConsumableArray2.default)(Array(emptyRowCount)).map(
               function (r, index) {
-                return /*#__PURE__*/ React.createElement(_TableRow["default"], {
+                return /*#__PURE__*/ React.createElement(_TableRow.default, {
                   style: {
                     height: rowHeight,
                   },
@@ -171,7 +171,7 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
               }
             ),
             emptyRowCount > 0 &&
-              /*#__PURE__*/ React.createElement(_TableRow["default"], {
+              /*#__PURE__*/ React.createElement(_TableRow.default, {
                 style: {
                   height: 1,
                 },
@@ -198,7 +198,7 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
                 data: data,
                 errorState: _this.props.errorState,
                 icons: _this.props.icons,
-                localization: (0, _objectSpread2["default"])(
+                localization: (0, _objectSpread2.default)(
                   {},
                   MTableBody.defaultProps.localization.editRow,
                   _this.props.localization.editRow,
@@ -233,7 +233,7 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
                 key: "row-" + data.tableData.id,
                 level: 0,
                 options: _this.props.options,
-                localization: (0, _objectSpread2["default"])(
+                localization: (0, _objectSpread2.default)(
                   {},
                   MTableBody.defaultProps.localization.editRow,
                   _this.props.localization.editRow,
@@ -296,7 +296,7 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
               options: _this2.props.options,
               isTreeData: _this2.props.isTreeData,
               hasAnyEditingRow: _this2.props.hasAnyEditingRow,
-              localization: (0, _objectSpread2["default"])(
+              localization: (0, _objectSpread2.default)(
                 {},
                 MTableBody.defaultProps.localization.editRow,
                 _this2.props.localization.editRow,
@@ -333,7 +333,7 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
         }
 
         return /*#__PURE__*/ React.createElement(
-          _TableBody["default"],
+          _TableBody.default,
           null,
           this.props.options.filtering &&
             /*#__PURE__*/ React.createElement(this.props.components.FilterRow, {
@@ -348,7 +348,7 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
               actionsColumnIndex: this.props.options.actionsColumnIndex,
               onFilterChanged: this.props.onFilterChanged,
               selection: this.props.options.selection,
-              localization: (0, _objectSpread2["default"])(
+              localization: (0, _objectSpread2.default)(
                 {},
                 MTableBody.defaultProps.localization.filterRow,
                 this.props.localization.filterRow,
@@ -378,7 +378,7 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
               icons: this.props.icons,
               key: "key-add-row",
               mode: "add",
-              localization: (0, _objectSpread2["default"])(
+              localization: (0, _objectSpread2.default)(
                 {},
                 MTableBody.defaultProps.localization.editRow,
                 this.props.localization.editRow,
@@ -410,7 +410,7 @@ var MTableBody = /*#__PURE__*/ (function (_React$Component) {
               icons: this.props.icons,
               key: "key-add-row",
               mode: "add",
-              localization: (0, _objectSpread2["default"])(
+              localization: (0, _objectSpread2.default)(
                 {},
                 MTableBody.defaultProps.localization.editRow,
                 this.props.localization.editRow,
@@ -448,50 +448,50 @@ MTableBody.defaultProps = {
   },
 };
 MTableBody.propTypes = {
-  actions: _propTypes["default"].array,
-  components: _propTypes["default"].object.isRequired,
-  columns: _propTypes["default"].array.isRequired,
-  currentPage: _propTypes["default"].number,
-  detailPanel: _propTypes["default"].oneOfType([
-    _propTypes["default"].func,
-    _propTypes["default"].arrayOf(
-      _propTypes["default"].oneOfType([
-        _propTypes["default"].object,
-        _propTypes["default"].func,
+  actions: _propTypes.default.array,
+  components: _propTypes.default.object.isRequired,
+  columns: _propTypes.default.array.isRequired,
+  currentPage: _propTypes.default.number,
+  detailPanel: _propTypes.default.oneOfType([
+    _propTypes.default.func,
+    _propTypes.default.arrayOf(
+      _propTypes.default.oneOfType([
+        _propTypes.default.object,
+        _propTypes.default.func,
       ])
     ),
   ]),
-  getFieldValue: _propTypes["default"].func.isRequired,
-  hasAnyEditingRow: _propTypes["default"].bool,
-  hasDetailPanel: _propTypes["default"].bool.isRequired,
-  icons: _propTypes["default"].object.isRequired,
-  isTreeData: _propTypes["default"].bool.isRequired,
-  onRowSelected: _propTypes["default"].func,
-  options: _propTypes["default"].object.isRequired,
-  pageSize: _propTypes["default"].number,
-  renderData: _propTypes["default"].array,
-  initialFormData: _propTypes["default"].object,
-  selection: _propTypes["default"].bool.isRequired,
-  scrollWidth: _propTypes["default"].number.isRequired,
-  showAddRow: _propTypes["default"].bool,
-  treeDataMaxLevel: _propTypes["default"].number,
-  localization: _propTypes["default"].object,
-  onFilterChanged: _propTypes["default"].func,
-  onGroupExpandChanged: _propTypes["default"].func,
-  onToggleDetailPanel: _propTypes["default"].func.isRequired,
-  onTreeExpandChanged: _propTypes["default"].func.isRequired,
-  onRowClick: _propTypes["default"].func,
-  onEditingCanceled: _propTypes["default"].func,
-  onEditingApproved: _propTypes["default"].func,
-  errorState: _propTypes["default"].oneOfType([
-    _propTypes["default"].object,
-    _propTypes["default"].bool,
+  getFieldValue: _propTypes.default.func.isRequired,
+  hasAnyEditingRow: _propTypes.default.bool,
+  hasDetailPanel: _propTypes.default.bool.isRequired,
+  icons: _propTypes.default.object.isRequired,
+  isTreeData: _propTypes.default.bool.isRequired,
+  onRowSelected: _propTypes.default.func,
+  options: _propTypes.default.object.isRequired,
+  pageSize: _propTypes.default.number,
+  renderData: _propTypes.default.array,
+  initialFormData: _propTypes.default.object,
+  selection: _propTypes.default.bool.isRequired,
+  scrollWidth: _propTypes.default.number.isRequired,
+  showAddRow: _propTypes.default.bool,
+  treeDataMaxLevel: _propTypes.default.number,
+  localization: _propTypes.default.object,
+  onFilterChanged: _propTypes.default.func,
+  onGroupExpandChanged: _propTypes.default.func,
+  onToggleDetailPanel: _propTypes.default.func.isRequired,
+  onTreeExpandChanged: _propTypes.default.func.isRequired,
+  onRowClick: _propTypes.default.func,
+  onEditingCanceled: _propTypes.default.func,
+  onEditingApproved: _propTypes.default.func,
+  errorState: _propTypes.default.oneOfType([
+    _propTypes.default.object,
+    _propTypes.default.bool,
   ]),
-  cellEditable: _propTypes["default"].object,
-  onCellEditStarted: _propTypes["default"].func,
-  onCellEditFinished: _propTypes["default"].func,
-  bulkEditOpen: _propTypes["default"].bool,
-  onBulkEditRowChanged: _propTypes["default"].func,
+  cellEditable: _propTypes.default.object,
+  onCellEditStarted: _propTypes.default.func,
+  onCellEditFinished: _propTypes.default.func,
+  bulkEditOpen: _propTypes.default.bool,
+  onBulkEditRowChanged: _propTypes.default.func,
 };
 var _default = MTableBody;
-exports["default"] = _default;
+exports.default = _default;
